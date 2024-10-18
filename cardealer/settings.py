@@ -158,7 +158,7 @@ if ENVIRONMENT == 'development':
 else:
     import dj_database_url
     DATABASES = {
-        'default': dj_database_url.parse('')
+        'default': dj_database_url.parse(env('DATABASE_URL'))
     }
 
 # DATABASES = {'default': dj_database_url.config(default='postgres://postgres:######@localhost/cardealer_db')}

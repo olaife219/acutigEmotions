@@ -1,2 +1,2 @@
 release: python manage.py migrate
-web: gunicorn carzone.wsgi
+web: daphne cardealer.asgi:application -b 0.0.0.0 -p $PORT
